@@ -1,16 +1,17 @@
 # evolving_web_crud
 
 ## Project setup
+#### Tous d'abord il vous faudra installer les dépendance relative aux projet grace a la commande suivante
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Utiliser cette commande pour démarrer le projet en local
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### la commande suivante est utilisée pour générer le projet en production
 ```
 npm run build
 ```
