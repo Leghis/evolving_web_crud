@@ -1,14 +1,14 @@
 <template>
 <div class="w-full p-5">
   <h3 class="text-lg">
-    Information utilisateur
+    Mini projet Evolving Web (AYINA MAERIK)
   </h3>
-<!--  <TableComponent :datas="data"/>-->
+<TableComponent v-if="data" :datas="data"/>
 </div>
 </template>
 
 <script>
-// import TableComponent from "../components/TableComponent";
+import TableComponent from "../components/TableComponent";
 import axios from 'axios'
 export default {
   name: "indexViews",
@@ -18,11 +18,20 @@ export default {
     }
   },
   async mounted() {
-    this.data =  await axios.get('https://jsonplaceholder.typicode.com/users')
-    console.log(this.data.data)
+    let localData = []
+    await axios.get('https://jsonplaceholder.typicode.com/users')
+    .then((response)=>{
+      console.log(response.data)
+      response.data.forEach((data)=>{
+        data.update = false
+        console.log(data)
+        localData = [...localData,data]
+      })
+      this.data = localData
+    })
   },
   components:{
-    // TableComponent
+    TableComponent
   }
 }
 </script>
