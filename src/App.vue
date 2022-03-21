@@ -1,18 +1,8 @@
 <template>
-  <div>
-    <index-views/>
+  <div id="app">
+    <router-view/>
   </div>
 </template>
-
-<script>
-import indexViews from "./views/indexViews";
-export default {
-  name: 'App',
-  components: {
-    indexViews
-  }
-}
-</script>
 
 <style>
 

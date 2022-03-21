@@ -71,6 +71,7 @@ export default {
   props : ['datas'],
   data(){
     return{
+      //data
     }
   },
   methods:{
